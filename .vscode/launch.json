@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "coreclr",
+        "request": "launch",
+        "name": "Launch BlazingPizza",
+       //"program": "${workspaceFolder}/${input:programPath}",
+       "program": "${workspaceFolder}/bin/Debug/net6.0/BlazingPizza.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": false,
+        "serverReadyAction": {
+          "action": "openExternally",
+          "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+        },
+        "env": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "preLaunchTask": "build"
+      }
+    ],
+    "inputs": [
+      {
+        "type": "pickString",
+        "id": "programPath",
+        "description": "Select the path to the executable",
+        "options": [
+          "bin/Debug/net9.0/BlazingPizza.dll",
+          "bin/Debug/net9.0/BlazingPizza.exe"
+        ]
+      }
+    ]
+  }
